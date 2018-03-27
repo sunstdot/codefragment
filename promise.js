@@ -65,8 +65,9 @@
         }
         //value是对象或者函数
         if(value && (typeof value === 'object' || typeof value === 'function')) {
+            let then;
             try {
-                let then = value.then;
+                then = value.then;
             } catch(err) {
                 return this.reject(promise, err);
             }
